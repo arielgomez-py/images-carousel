@@ -12,6 +12,7 @@ import mojito3 from "../assets/mojito3.jpg";
 import mojito4 from "../assets/mojito4.jpg";
 
 const Carousel = () => {
+  // array of cards
   const cards = [
     { id: 1, src: cocktail, description: "Cocktail" },
     { id: 2, src: aperitif, description: "Aperitif" },
