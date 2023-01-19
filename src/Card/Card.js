@@ -1,10 +1,10 @@
 import React from 'react'
-import cocktail from "../assets/cocktail.jpg";
 
-const Card = (props,cocktail) => {
+const Card = (props) => {
   return (
     <div className='card'>
-      {props.children}
+      <img src={props.src}/>
+      <p>{props.description}</p>
     </div>
   )
 }
