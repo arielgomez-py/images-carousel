@@ -1,6 +1,7 @@
 import React from "react";
 import "./Carousel.css";
 import Card from "../Card/Card";
+import { useState } from "react";
 
 //import the images using variables that represents to the images in the files assest
 import cocktail from "../assets/cocktail.jpg";
@@ -12,6 +13,8 @@ import mojito3 from "../assets/mojito3.jpg";
 import mojito4 from "../assets/mojito4.jpg";
 
 const Carousel = () => {
+  //State to show the image
+  const [currentIndex, setCurrentIndex] = useState(0);
   // array of cards
   const cards = [
     { id: 1, src: cocktail, description: "Cocktail" },

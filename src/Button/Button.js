@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const Button = () => {
+const Button = (props) => {
   return (
     <div>
-      <button>boton</button>
+      <button >{props.span}</button>
     </div>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;
