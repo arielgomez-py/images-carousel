@@ -13,8 +13,6 @@ import mojito3 from "../assets/mojito3.jpg";
 import mojito4 from "../assets/mojito4.jpg";
 
 const Carousel = () => {
-  //State to show the image
-  const [currentIndex, setCurrentIndex] = useState(0);
   // array of cards
   const cards = [
     { id: 1, src: cocktail, description: "Cocktail" },
@@ -25,13 +23,44 @@ const Carousel = () => {
     { id: 6, src: mojito3, description: "Mojito3" },
     { id: 7, src: mojito4, description: "Mojito4" },
   ];
+
+  //State to show the image
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  //Move next function
+  const handleNext = () => {
+    if (currentIndex === cards.length - 1) {
+      setCurrentIndex(0);
+      console.log(currentIndex);
+    } else {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+
+  //Move previous function
+  const handlePrev = () => {
+    if (currentIndex === 0) {
+      setCurrentIndex(cards.length - 1);
+    }else{
+      setCurrentIndex(currentIndex - 1)
+    }
+  };
   return (
     <div className="cardsContainer">
-      {cards.map((card) => (
-        <Card key={card.id} src={card.src} description={card.description} />
-      ))}
+      <Card
+        src={cards[currentIndex].src}
+        description={cards[currentIndex].description}
+      />
     </div>
   );
 };
 
 export default Carousel;
+
+{
+  /*
+  {cards.map((card) => (
+        <Card key={card.id} src={card.src} description={card.description} />
+      ))}
+*/
+}

@@ -3,7 +3,11 @@ import React from "react";
 const Button = (props) => {
   return (
     <div>
-      <button >{props.span}</button>
+      <button
+        onClick={props.onClick}
+      >
+        {props.span}
+      </button>
     </div>
   );
 };
