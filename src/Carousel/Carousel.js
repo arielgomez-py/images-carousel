@@ -12,7 +12,7 @@ import mojito2 from "../assets/mojito2.jpg";
 import mojito3 from "../assets/mojito3.jpg";
 import mojito4 from "../assets/mojito4.jpg";
 
-const Carousel = () => {
+const Carousel = (props) => {
   // array of cards
   const cards = [
     { id: 1, src: cocktail, description: "Cocktail" },
