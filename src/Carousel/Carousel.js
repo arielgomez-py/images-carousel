@@ -1,66 +1,14 @@
 import React from "react";
 import "./Carousel.css";
 import Card from "../Card/Card";
-import { useState } from "react";
-
-//import the images using variables that represents to the images in the files assest
-import cocktail from "../assets/cocktail.jpg";
-import aperitif from "../assets/aperitif.jpg";
-import cups from "../assets/cups.jpg";
-import mojito from "../assets/mojito.jpg";
-import mojito2 from "../assets/mojito2.jpg";
-import mojito3 from "../assets/mojito3.jpg";
-import mojito4 from "../assets/mojito4.jpg";
 
 const Carousel = (props) => {
-  // array of cards
-  const cards = [
-    { id: 1, src: cocktail, description: "Cocktail" },
-    { id: 2, src: aperitif, description: "Aperitif" },
-    { id: 3, src: cups, description: "Cups" },
-    { id: 4, src: mojito, description: "Mojito" },
-    { id: 5, src: mojito2, description: "Mojito2" },
-    { id: 6, src: mojito3, description: "Mojito3" },
-    { id: 7, src: mojito4, description: "Mojito4" },
-  ];
-
-  //State to show the image
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  //Move next function
-  const handleNext = () => {
-    if (currentIndex === cards.length - 1) {
-      setCurrentIndex(0);
-      console.log(currentIndex);
-    } else {
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
-
-  //Move previous function
-  const handlePrev = () => {
-    if (currentIndex === 0) {
-      setCurrentIndex(cards.length - 1);
-    }else{
-      setCurrentIndex(currentIndex - 1)
-    }
-  };
+  
   return (
     <div className="cardsContainer">
-      <Card
-        src={cards[currentIndex].src}
-        description={cards[currentIndex].description}
-      />
+      <Card src={props.image} description={props.description} />
     </div>
   );
 };
 
 export default Carousel;
-
-{
-  /*
-  {cards.map((card) => (
-        <Card key={card.id} src={card.src} description={card.description} />
-      ))}
-*/
-}

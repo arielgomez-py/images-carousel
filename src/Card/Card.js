@@ -1,13 +1,14 @@
-import React from 'react'
-import "./Card.css"
+import React from "react";
+import "./Card.css";
 
 const Card = (props) => {
+  
   return (
-    <div className='card'>
-      <img src={props.src}/>
+    <div className={`card ${props.movingCard}`}>
+      <img src={props.src} />
       <p>{props.description}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;
