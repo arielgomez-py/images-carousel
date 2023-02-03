@@ -4,7 +4,7 @@ import Card from "../Card/Card";
 
 const Carousel = (props) => {
   return (
-    <div className="cardsContainer">
+    <div key={props.index} className="cardsContainer">
       <Card
         src={props.image}
         description={props.description}
