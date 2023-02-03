@@ -18,4 +18,9 @@ p {
     padding-top: 8px;
 }
 
-.moving-card {}
+.moving-next {
+    background-color: rebeccapurple;
+
+}
+
+.moving-prev {}

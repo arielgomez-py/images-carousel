@@ -6,7 +6,7 @@ const Carousel = (props) => {
   
   return (
     <div className="cardsContainer">
-      <Card src={props.image} description={props.description} />
+      <Card src={props.image} description={props.description} movingCard={props.movingCard} />
     </div>
   );
 };

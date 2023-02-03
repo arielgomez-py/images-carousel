@@ -8,7 +8,7 @@ function App(props) {
   //State to show the image
   const [currentIndex, setCurrentIndex] = useState(0);
   // State to add moving effect in carousel
-  const [moving, setMoving] = useState(false);
+  const [moving, setMoving] = useState("");
 
   //Move next function
   const handleNext = () => {
@@ -16,6 +16,7 @@ function App(props) {
       setCurrentIndex(0);
     } else {
       setCurrentIndex(currentIndex + 1);
+      setMoving("moving-next");
     }
   };
 
@@ -25,13 +26,18 @@ function App(props) {
       setCurrentIndex(cards.length - 1);
     } else {
       setCurrentIndex(currentIndex - 1);
+      setMoving("moving-prev");
     }
   };
   return (
     <div className="App">
       <h1>Images carousel</h1>
       <Button onClick={handleNext} span=">>>>>" />
-      <Carousel image ={cards[currentIndex].src}  description = {cards[currentIndex].description}/>
+      <Carousel
+        image={cards[currentIndex].src}
+        description={cards[currentIndex].description}
+        movingCard={moving}
+      />
       <Button onClick={handlePrev} span="<<<<<" />
     </div>
   );
