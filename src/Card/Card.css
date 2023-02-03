@@ -5,7 +5,7 @@
     background-color: aliceblue;
     display: flex;
     flex-direction: column;
-
+    transition: transform 0.5s ease;
 }
 
 img {
@@ -19,8 +19,10 @@ p {
 }
 
 .moving-next {
-    background-color: rebeccapurple;
+    transform: translateX(100%);
 
 }
 
-.moving-prev {}
+.moving-prev {
+    transform: translateX(-100%);
+}

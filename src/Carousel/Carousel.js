@@ -3,10 +3,13 @@ import "./Carousel.css";
 import Card from "../Card/Card";
 
 const Carousel = (props) => {
-  
   return (
     <div className="cardsContainer">
-      <Card src={props.image} description={props.description} movingCard={props.movingCard} />
+      <Card
+        src={props.image}
+        description={props.description}
+        movingCard={props.movingCard}
+      />
     </div>
   );
 };
