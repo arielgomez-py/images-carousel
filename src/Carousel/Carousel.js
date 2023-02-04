@@ -17,11 +17,6 @@ const Carousel = (props) => {
     }
   };
 
-  /*if (props.currentIndex === props.cards.length - 1) {
-    props.setCurrentIndex(0);
-  } else {
-    props.setCurrentIndex(props.currentIndex + 1);
-  }*/
   return (
     <div className="cardsContainer">
       <Card
@@ -34,7 +29,7 @@ const Carousel = (props) => {
       <div className="backgroundCard">
         <img className="backgroundImage" src={handleBackground()} />
         <p className="backgroundDescription">
-          {props.cards[props.currentIndex + 1].description}
+          {/*props.cards[props.currentIndex + 1].description*/}
         </p>
       </div>
     </div>
