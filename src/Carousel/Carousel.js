@@ -11,6 +11,10 @@ const Carousel = (props) => {
         movingCard={props.movingCard}
         setMoving={props.setMoving}
       />
+      <img
+        className="backgroundImage"
+        src={props.cards[props.currentIndex + 1].src}
+      />
     </div>
   );
 };

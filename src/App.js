@@ -12,6 +12,7 @@ function App(props) {
 
   //Move next function
   const handleNext = () => {
+    if (moving != "") return; //to desable the button when the cards is moving
     if (currentIndex === cards.length - 1) {
       setCurrentIndex(0);
     } else {
@@ -24,6 +25,7 @@ function App(props) {
 
   //Move previous function
   const handlePrev = () => {
+    if (moving != "") return; //to desable the button when the cards is moving
     if (currentIndex === 0) {
       setCurrentIndex(cards.length - 1);
     } else {
@@ -42,6 +44,8 @@ function App(props) {
         description={cards[currentIndex].description}
         movingCard={moving}
         setMoving={setMoving}
+        cards={cards}
+        currentIndex={currentIndex}
       />
       <Button onClick={handlePrev} span="<<<<<" />
     </div>
