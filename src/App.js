@@ -46,6 +46,7 @@ function App(props) {
         setMoving={setMoving}
         cards={cards}
         currentIndex={currentIndex}
+        setCurrentIndex={setCurrentIndex}
       />
       <Button onClick={handlePrev} span="<<<<<" />
     </div>

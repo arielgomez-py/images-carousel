@@ -3,6 +3,25 @@ import "./Carousel.css";
 import Card from "../Card/Card";
 
 const Carousel = (props) => {
+  const handleBackground = () => {
+    if (
+      props.currentIndex < props.cards.length - 1 &&
+      props.movingCard == "moving-next"
+    ) {
+      return props.cards[props.currentIndex + 1].src;
+    } else if (
+      props.currentIndex == props.cards.length - 1 &&
+      props.movingCard == "moving-next"
+    ) {
+      return props.cards[0].src;
+    }
+  };
+
+  /*if (props.currentIndex === props.cards.length - 1) {
+    props.setCurrentIndex(0);
+  } else {
+    props.setCurrentIndex(props.currentIndex + 1);
+  }*/
   return (
     <div className="cardsContainer">
       <Card
@@ -11,12 +30,10 @@ const Carousel = (props) => {
         movingCard={props.movingCard}
         setMoving={props.setMoving}
       />
+      {/*background card created for make the visual effect in the carousel */}
       <div className="backgroundCard">
-        <img
-          className="backgroundImage"
-          src={props.cards[props.currentIndex + 1].src}
-        />
-        <p children="backgroundDescription">
+        <img className="backgroundImage" src={handleBackground()} />
+        <p className="backgroundDescription">
           {props.cards[props.currentIndex + 1].description}
         </p>
       </div>
