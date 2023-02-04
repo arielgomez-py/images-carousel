@@ -1,5 +1,4 @@
 .cardsContainer {
-    background-color: aqua;
     height: 200px;
     width: 20%;
     display: flex;
@@ -10,13 +9,33 @@
     position: relative;
 }
 
-.backgroundImage {
+p {
+    margin: 0 auto;
+    padding-top: 8px;
+}
+
+.backgroundCard {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 80%;
     position: absolute;
-    top: 0;
-    left: 0;
+    /*top: o;
+    left: 3;
+    */
 }
+
+.backgroundImage {
+    width: 100%;
+    height: 80%;
+}
+
+.backgroundDescription {
+    margin: 0 auto;
+    padding-top: 8px;
+}
+
 
 /*.cardsContainer::-webkit-scrollbar {
     height: 0 !important;

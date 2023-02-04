@@ -1,5 +1,5 @@
 .card {
-    height: 88%;
+    height: 80%;
     min-width: 100%;
     background-color: aliceblue;
     display: flex;
@@ -20,7 +20,6 @@ p {
 .moving-next {
     transform: translateX(100%);
     transition: transform 0.5s ease;
-
 }
 
 .moving-prev {

@@ -11,10 +11,15 @@ const Carousel = (props) => {
         movingCard={props.movingCard}
         setMoving={props.setMoving}
       />
-      <img
-        className="backgroundImage"
-        src={props.cards[props.currentIndex + 1].src}
-      />
+      <div className="backgroundCard">
+        <img
+          className="backgroundImage"
+          src={props.cards[props.currentIndex + 1].src}
+        />
+        <p children="backgroundDescription">
+          {props.cards[props.currentIndex + 1].description}
+        </p>
+      </div>
     </div>
   );
 };
