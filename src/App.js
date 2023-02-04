@@ -15,8 +15,10 @@ function App(props) {
     if (currentIndex === cards.length - 1) {
       setCurrentIndex(0);
     } else {
-      setCurrentIndex(currentIndex + 1);
       setMoving("moving-next");
+      setTimeout(() => {
+        setCurrentIndex(currentIndex + 1);
+      }, 500);
     }
   };
 
@@ -25,8 +27,10 @@ function App(props) {
     if (currentIndex === 0) {
       setCurrentIndex(cards.length - 1);
     } else {
-      setCurrentIndex(currentIndex - 1);
       setMoving("moving-prev");
+      setTimeout(() => {
+        setCurrentIndex(currentIndex - 1);
+      }, 500);
     }
   };
   return (
@@ -37,6 +41,7 @@ function App(props) {
         image={cards[currentIndex].src}
         description={cards[currentIndex].description}
         movingCard={moving}
+        setMoving={setMoving}
       />
       <Button onClick={handlePrev} span="<<<<<" />
     </div>

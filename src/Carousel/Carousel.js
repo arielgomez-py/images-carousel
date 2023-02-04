@@ -4,11 +4,12 @@ import Card from "../Card/Card";
 
 const Carousel = (props) => {
   return (
-    <div key={props.index} className="cardsContainer">
+    <div className="cardsContainer">
       <Card
         src={props.image}
         description={props.description}
         movingCard={props.movingCard}
+        setMoving={props.setMoving}
       />
     </div>
   );
