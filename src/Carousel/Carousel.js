@@ -1,6 +1,7 @@
 import React from "react";
 import "./Carousel.css";
 import Card from "../Card/Card";
+import { cards } from "../data/data";
 
 const Carousel = (props) => {
   const handleBackground = () => {
@@ -14,6 +15,11 @@ const Carousel = (props) => {
       props.movingCard == "moving-next"
     ) {
       return props.cards[0].src;
+    }
+    if (props.currentIndex === 0 && props.movingCard == "moving-prev") {
+      return props.cards[props.currentIndex].src;
+    } else if (props.currentIndex > 0 && props.movingCard == "moving-prev") {
+      return props.cards[props.currentIndex - 1].src;
     }
   };
 
