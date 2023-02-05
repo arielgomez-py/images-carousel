@@ -38,17 +38,19 @@ function App(props) {
   return (
     <div className="App">
       <h1>Images carousel</h1>
-      <Button onClick={handleNext} span=">>>>>" />
-      <Carousel
-        image={cards[currentIndex].src}
-        description={cards[currentIndex].description}
-        movingCard={moving}
-        setMoving={setMoving}
-        cards={cards}
-        currentIndex={currentIndex}
-        setCurrentIndex={setCurrentIndex}
-      />
-      <Button onClick={handlePrev} span="<<<<<" />
+      <section className=" carousel">
+        <Button onClick={handleNext} span=">>>>>" />
+        <Carousel
+          image={cards[currentIndex].src}
+          description={cards[currentIndex].description}
+          movingCard={moving}
+          setMoving={setMoving}
+          cards={cards}
+          currentIndex={currentIndex}
+          setCurrentIndex={setCurrentIndex}
+        />
+        <Button onClick={handlePrev} span="<<<<<" />
+      </section>
     </div>
   );
 }

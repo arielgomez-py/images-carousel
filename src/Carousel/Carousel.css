@@ -1,6 +1,6 @@
 .cardsContainer {
-    height: 200px;
-    width: 20%;
+    height: 90vh;
+    width: 50%;
     display: flex;
     flex-direction: row;
     /*overflow-x: scroll;*/
@@ -21,9 +21,7 @@ p {
     width: 100%;
     height: 80%;
     position: absolute;
-    /*top: o;
-    left: 3;
-    */
+
 }
 
 .backgroundImage {
@@ -35,8 +33,3 @@ p {
     margin: 0 auto;
     padding-top: 8px;
 }
-
-
-/*.cardsContainer::-webkit-scrollbar {
-    height: 0 !important;
-}*/
