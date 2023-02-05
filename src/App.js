@@ -3,6 +3,7 @@ import Button from "./Button/Button";
 import Carousel from "./Carousel/Carousel";
 import { useState } from "react";
 import { cards } from "./data/data";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 function App(props) {
   //State to show the image
@@ -38,8 +39,8 @@ function App(props) {
   return (
     <div className="App">
       <h1>Images carousel</h1>
-      <section className=" carousel">
-        <Button onClick={handleNext} span=">>>>>" />
+      <section>
+        <Button onClick={handlePrev} span={<FaArrowLeft />} />
         <Carousel
           image={cards[currentIndex].src}
           description={cards[currentIndex].description}
@@ -49,7 +50,7 @@ function App(props) {
           currentIndex={currentIndex}
           setCurrentIndex={setCurrentIndex}
         />
-        <Button onClick={handlePrev} span="<<<<<" />
+        <Button onClick={handleNext} span={<FaArrowRight />} />
       </section>
     </div>
   );
