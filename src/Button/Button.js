@@ -3,9 +3,9 @@ import "./Button.css";
 
 const Button = (props) => {
   return (
-    <div>
-      <button onClick={props.onClick}>{props.span}</button>
-    </div>
+    <button className={props.className} onClick={props.onClick}>
+      {props.span}
+    </button>
   );
 };
 

@@ -40,7 +40,11 @@ function App(props) {
     <div className="App">
       <h1>Images carousel</h1>
       <section>
-        <Button onClick={handlePrev} span={<FaArrowLeft />} />
+        <Button
+          className="button-prev"
+          onClick={handlePrev}
+          span={<FaArrowLeft />}
+        />
         <Carousel
           image={cards[currentIndex].src}
           description={cards[currentIndex].description}
@@ -50,7 +54,11 @@ function App(props) {
           currentIndex={currentIndex}
           setCurrentIndex={setCurrentIndex}
         />
-        <Button onClick={handleNext} span={<FaArrowRight />} />
+        <Button
+          className="button-next"
+          onClick={handleNext}
+          span={<FaArrowRight />}
+        />
       </section>
     </div>
   );
