@@ -15,6 +15,7 @@ function App(props) {
   const handleNext = () => {
     if (moving != "") return; //to desable the button when the cards is moving
     if (currentIndex === cards.length - 1) {
+      setMoving("moving-next");
       setCurrentIndex(0);
     } else {
       setMoving("moving-next");
@@ -28,6 +29,7 @@ function App(props) {
   const handlePrev = () => {
     if (moving != "") return; //to desable the button when the cards is moving
     if (currentIndex === 0) {
+      setMoving("moving-prev");
       setCurrentIndex(cards.length - 1);
     } else {
       setMoving("moving-prev");

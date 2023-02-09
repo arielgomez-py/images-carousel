@@ -5,6 +5,13 @@ import { cards } from "../data/data";
 
 const Carousel = (props) => {
   const handleBackground = () => {
+    /*if (
+      props.currentIndex == props.cards.length &&
+      props.movingCard == "moving-next"
+    ) {
+      return props.cards[0];
+    }*/
+    /*For moving */
     if (
       props.currentIndex < props.cards.length - 1 &&
       props.movingCard == "moving-next"
