@@ -5,26 +5,19 @@ import { cards } from "../data/data";
 
 const Carousel = (props) => {
   const handleBackground = () => {
-    /*if (
-      props.currentIndex == props.cards.length &&
-      props.movingCard == "moving-next"
-    ) {
-      return props.cards[0];
-    }*/
-    /*For moving */
+    /*Next */
     if (
-      props.currentIndex < props.cards.length - 1 &&
-      props.movingCard == "moving-next"
-    ) {
-      return props.cards[props.currentIndex + 1].src;
-    } else if (
-      props.currentIndex == props.cards.length - 1 &&
-      props.movingCard == "moving-next"
+      props.currentIndex === props.cards.length - 1 &&
+      props.movingCard === "moving-next"
     ) {
       return props.cards[0].src;
+    } else if (props.movingCard === "moving-next") {
+      return props.cards[props.currentIndex + 1].src;
     }
+
+    /*Previous */
     if (props.currentIndex === 0 && props.movingCard == "moving-prev") {
-      return props.cards[props.currentIndex].src;
+      return props.cards[props.cards.length - 1].src;
     } else if (props.currentIndex > 0 && props.movingCard == "moving-prev") {
       return props.cards[props.currentIndex - 1].src;
     }
